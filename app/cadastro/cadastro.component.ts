@@ -51,7 +51,6 @@ export class CadastroComponent {
         this.service
             .cadastra(this.foto)
             .subscribe(res => {
-                console.log('Foto cadastrada com sucesso!');
                 this.mensagem = res.mensagem;
                 this.foto = new FotoComponent();
                 if (!res.inclusao) this.router.navigate(['']);

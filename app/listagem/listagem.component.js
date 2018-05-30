@@ -23,14 +23,16 @@ var ListagemComponent = /** @class */ (function () {
             _this.fotos = fotos;
         }, function (erro) { return console.log(erro); });
     }
-    ListagemComponent.prototype.remove = function (foto) {
+    ListagemComponent.prototype.remove = function (foto, painel) {
         var _this = this;
         this.service
             .remove(foto)
             .subscribe(function () {
-            var indice = _this.fotos.indexOf(foto);
-            _this.fotos.splice(indice, 1);
-            _this.mensagem = 'Foto removida com sucesso!';
+            painel.fadeOut(function () {
+                var indice = _this.fotos.indexOf(foto);
+                _this.fotos.splice(indice, 1);
+                _this.mensagem = 'Foto removida com sucesso!';
+            });
         }, function (erro) { return _this.mensagem = 'Não foi possivel remover a foto!'; });
     };
     ListagemComponent = __decorate([

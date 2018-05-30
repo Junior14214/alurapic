@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var botao_module_1 = require("./botao/botao.module");
 require("rxjs/add/operator/map");
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
@@ -30,7 +31,8 @@ var AppModule = /** @class */ (function () {
                 foto_module_1.FotoModule,
                 app_routes_1.routing,
                 forms_1.FormsModule,
-                forms_1.ReactiveFormsModule
+                forms_1.ReactiveFormsModule,
+                botao_module_1.BotaoModule
             ],
             declarations: [app_component_1.AppComponent, listagem_component_1.ListagemComponent, cadastro_component_1.CadastroComponent],
             bootstrap: [app_component_1.AppComponent]

@@ -1,3 +1,4 @@
+import { BotaoModule } from './botao/botao.module';
 import 'rxjs/add/operator/map';
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,7 +21,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FotoModule,
     routing,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BotaoModule
   ],
   declarations: [ AppComponent, ListagemComponent, CadastroComponent ],
   bootstrap:    [ AppComponent ]

@@ -43,7 +43,6 @@ var CadastroComponent = /** @class */ (function () {
         this.service
             .cadastra(this.foto)
             .subscribe(function (res) {
-            console.log('Foto cadastrada com sucesso!');
             _this.mensagem = res.mensagem;
             _this.foto = new foto_component_1.FotoComponent();
             if (!res.inclusao)
